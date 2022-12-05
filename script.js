@@ -43,6 +43,7 @@ operationEl.forEach((operation) => {
     lastOperation = operationName;
   });
 });
+
 // Clear the value from display one and add it in display two
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
