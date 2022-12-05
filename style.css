@@ -68,3 +68,10 @@ section {
   cursor: pointer;
   transition: 0.5s;
 }
+.button:hover {
+  background-color: #1e2b2e;
+  transform: scale(.92);
+}
+.btn-0 {
+  grid-column: 1/3;
+}
