@@ -98,6 +98,7 @@ clearLastEl.addEventListener("click", () => {
 });
 
 // Get value from keyboard
+
 window.addEventListener("keydown", (e) => {
   if (
     e.key === "0" ||
@@ -119,7 +120,10 @@ window.addEventListener("keydown", (e) => {
   } else if (e.key === "*") {
     clickOperation("x");
     // console.log(e.key)
+  } else if (e.key == "Enter" || e.key === "=") {
+    clickEqual();
   }
+  // console.log(e.key)
 });
 
 // Number buttons
@@ -131,11 +135,16 @@ function clickButtonEl(key) {
   });
 }
 
-// Get value from keyboard operation btn
+// Operation buttons
 function clickOperation(key) {
   operationEl.forEach((operation) => {
     if (operation.innerText === key) {
       operation.click();
     }
   });
+}
+
+// Enter or Equal button
+function clickEqual() {
+  equalEl.click();
 }
