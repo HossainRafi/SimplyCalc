@@ -25,13 +25,14 @@ section {
   border: 3px solid #161617;
 }
 .display {
-  background-color: #d7d7d7;
+  background-color: #e1e1e1;
   height: 100px;
   width: 100%;
   text-align: right;
   padding: 20px;
   font-size: 30px;
   position: relative;
+  border: 3px solid #a9a9a9;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -66,10 +67,11 @@ section {
   gap: 5px;
   font-size: 30px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .button:hover {
   background-color: #1e2b2e;
+  font-size: 25px;
   transform: scale(.92);
 }
 .btn-0 {
