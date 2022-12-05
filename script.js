@@ -15,3 +15,16 @@ let result = null;
 let lastOperation = "";
 let haveDot = false;
 
+// ============= Get The Number ============
+numbersEl.forEach((number) => {
+  number.addEventListener("click", (e) => {
+    if (e.target.innerText === "." && !haveDot) {
+      haveDot = true;
+    } else if (e.target.innerText === "." && haveDot) {
+      return;
+    }
+    dis2Num += e.target.innerText;
+    display2El.innerText = dis2Num;
+    // console.log();
+  });
+});
