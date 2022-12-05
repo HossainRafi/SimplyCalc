@@ -80,3 +80,14 @@ equalEl.addEventListener("click", () => {
   dis2Num = result;
   dis1Num = "";
 });
+
+// Functionality for clicking "c"
+clearAllEl.addEventListener("click", () => {
+  dis1Num = "";
+  dis2Num = "";
+  display1El.innerText = "";
+  display2El.innerText = "";
+  result = "";
+  tempResultEl.innerText = "";
+});
+
