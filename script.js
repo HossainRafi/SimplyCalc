@@ -97,7 +97,6 @@ clearLastEl.addEventListener("click", () => {
   dis2Num = "";
 });
 
-
 // Get value from keyboard
 window.addEventListener("keydown", (e) => {
   if (
@@ -115,6 +114,11 @@ window.addEventListener("keydown", (e) => {
   ) {
     clickButtonEl(e.key);
     // console.log(e.key)
+  } else if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "%") {
+    clickOperation(e.key);
+  } else if (e.key === "*") {
+    clickOperation("x");
+    // console.log(e.key)
   }
 });
 
@@ -123,6 +127,15 @@ function clickButtonEl(key) {
   numbersEl.forEach((button) => {
     if (button.innerText === key) {
       button.click();
+    }
+  });
+}
+
+// Get value from keyboard operation btn
+function clickOperation(key) {
+  operationEl.forEach((operation) => {
+    if (operation.innerText === key) {
+      operation.click();
     }
   });
 }
