@@ -15,7 +15,7 @@ let result = null;
 let lastOperation = "";
 let haveDot = false;
 
-// ============= Get The Number ============
+// Get the number
 numbersEl.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (e.target.innerText === "." && !haveDot) {
@@ -28,3 +28,28 @@ numbersEl.forEach((number) => {
     // console.log();
   });
 });
+
+// Get the value after clicking operation
+operationEl.forEach((operation) => {
+  operation.addEventListener("click", (e) => {
+    if (!dis2Num) return;
+    haveDot = false;
+    const operationName = e.target.innerText;
+    if (dis1Num && dis2Num && lastOperation) {
+      
+    } else {
+      result = parseFloat(dis2Num);
+    }
+    clearVar(operationName);
+    lastOperation = operationName;
+    console.log(result);
+  });
+});
+// Clear the value from display one and add it in display two
+function clearVar(name = "") {
+  dis1Num += dis2Num + " " + name + " ";
+  display1El.innerText = dis1Num;
+  display2El.innerText = "";
+  dis2Num = "";
+  tempResultEl.innerText = result;
+}
