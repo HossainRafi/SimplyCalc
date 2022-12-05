@@ -8,3 +8,10 @@ const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entity-clear");
 
+// ============ Output Variables ============
+let dis1Num = "";
+let dis2Num = "";
+let result = null;
+let lastOperation = "";
+let haveDot = false;
+
