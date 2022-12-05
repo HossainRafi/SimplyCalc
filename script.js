@@ -36,7 +36,7 @@ operationEl.forEach((operation) => {
     haveDot = false;
     const operationName = e.target.innerText;
     if (dis1Num && dis2Num && lastOperation) {
-      
+      mathOperation();
     } else {
       result = parseFloat(dis2Num);
     }
@@ -53,3 +53,19 @@ function clearVar(name = "") {
   dis2Num = "";
   tempResultEl.innerText = result;
 }
+
+// Math operations
+function mathOperation() {
+  if (lastOperation === "x") {
+    result = parseFloat(result) * parseFloat(dis2Num);
+  } else if (lastOperation === "+") {
+    result = parseFloat(result) + parseFloat(dis2Num);
+  } else if (lastOperation === "-") {
+    result = parseFloat(result) - parseFloat(dis2Num);
+  } else if (lastOperation === "/") {
+    result = parseFloat(result) / parseFloat(dis2Num);
+  } else if (lastOperation === "%") {
+    result = parseFloat(result) % parseFloat(dis2Num);
+  }
+}
+// operation();
